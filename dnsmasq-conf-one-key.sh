@@ -22,11 +22,11 @@ fi
 
 # Download the list files
 echo "Downloading accelerated-domains.china.conf"
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
 echo "Downloading bogus-nxdomain.china.conf"
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/bogus-nxdomain.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/bogus-nxdomain.china.conf
 echo "Downloading google.china.conf"
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
 
 # Restart service
 echo "Restarting dnsmasq"
@@ -49,9 +49,9 @@ if [ -f "/etc/dnsmasq.d/google.china.conf" ]; then
     rm /etc/dnsmasq.d/google.china.conf
 fi
 
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/bogus-nxdomain.china.conf
-wget -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/bogus-nxdomain.china.conf
+wget --no-check-certificate -q -P /etc/dnsmasq.d https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
 SAD
 
 chmod +x /root/dnsmasq-update.sh
